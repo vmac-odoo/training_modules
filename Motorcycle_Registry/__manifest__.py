@@ -11,6 +11,10 @@
     "author": "vmac-odoo",
     "website": "https://github.com/vmac-odoo",
     "category": "Kawiil",
+    "data": [
+        "security/motorcycle_registry_groups.xml",
+        "security/ir.model.access.csv"
+    ],
     "demo": [
         "demo/motorcycle_demo.xml",
     ],

@@ -1,1 +1,1 @@
-from . import Motorcycle
+from . import motorcycle

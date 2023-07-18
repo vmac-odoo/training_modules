@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="motorcycle_01" model="motorcycle.registry">
+            <field name="registry_number">RN0001</field>
+            <field name="vin">VS0001</field>
+            <field name="first_name">Victor</field>
+            <field name="last_name">Armenta</field>
+        </record>
+        <record id="motorcycle_02" model="motorcycle.registry">
+            <field name="registry_number">RN0002</field>
+            <field name="vin">VS0002</field>
+            <field name="first_name">Luis</field>
+            <field name="last_name">Romero</field>
+        </record>
+        <record id="motorcycle_03" model="motorcycle.registry">
+            <field name="registry_number">RN0003</field>
+            <field name="vin">VS0003</field>
+            <field name="first_name">Pedro</field>
+            <field name="last_name">Sola</field>
+        </record>
+    </data>
+</odoo>

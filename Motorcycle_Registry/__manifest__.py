@@ -11,5 +11,9 @@
     'author': 'vmac-odoo',
     'website': 'https://github.com/vmac-odoo',
     'category': 'Kawiil',
+    'demo': [
+        'demo/motorcycle_demo.xml',
+    ],
     'application': True,
+    'installable': True,
 }

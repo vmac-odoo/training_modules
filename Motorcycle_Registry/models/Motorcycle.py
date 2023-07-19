@@ -78,6 +78,7 @@ class MotorcycleRegistry(models.Model):
 
     @api.depends('vin')
     def _compute_vin_relations(self):
+        self.brand, self.make, self.model = '', '', ''
         for motorcycle_registry in self:
             if motorcycle_registry.vin and bool(re.match(vin_pattern, str(motorcycle_registry.vin))):
                 motorcycle_registry.brand = motorcycle_registry.vin[:2]

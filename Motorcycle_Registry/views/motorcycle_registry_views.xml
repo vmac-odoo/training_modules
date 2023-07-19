@@ -5,7 +5,7 @@
         <field name="name">motorcycle.registry.list</field>
         <field name="model">motorcycle.registry</field>
         <field name="arch" type="xml">
-            <tree string="Registry" editable="1">
+            <tree string="Registry">
                 <field name="registry_number" />
                 <field name="vin" />
                 <field name="brand" />

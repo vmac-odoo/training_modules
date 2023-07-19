@@ -13,5 +13,5 @@ class MotorcycleRegistry(models.Model):
     picture = fields.Binary(string="Picture")
     current_mileage = fields.Float(string="Current Mileage")
     license_plate = fields.Char(string="License Plate")
-    certificate_title = fields.Char(string="Certificate of Title")
+    certificate_title = fields.Binary(string="Certificate of Title")
     register_date = fields.Date(string="Register Date")

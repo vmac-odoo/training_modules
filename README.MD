@@ -1,5 +1,9 @@
 # TRAINING MODULES FOR INTERNSHIP
+<a href="https://www.python.org"><img alt="Python 3.10" src="https://img.shields.io/badge/python-3.10-3776AB.svg"></a>
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/odoo%20tested%20Version-ODOO%2016.0-714B67.svg"></a>
 
+This is part of the intership to develop skills to develop and test odoo modules.
 ## Solutions T05:
  - Create one record from the Motorcycle Registry Model. This Registry should have more than 1000 miles and no license plate.
 
@@ -36,4 +40,3 @@
     True
     >>> env.cr.commit()
     ```
-### TODO: Make all description

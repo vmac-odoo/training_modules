@@ -5,11 +5,13 @@
         <field name="name">motorcycle.registry.list</field>
         <field name="model">motorcycle.registry</field>
         <field name="arch" type="xml">
-            <tree string="Registry">
+            <tree string="Registry" editable="1">
                 <field name="registry_number" />
                 <field name="vin" />
-                <field name="first_name" />
-                <field name="last_name" />
+                <field name="brand" />
+                <field name="make" />
+                <field name="model" />
+                <field name="owner_name" />
             </tree>
         </field>
     </record>
@@ -35,13 +37,17 @@
                             <separator string="Motorcycle Information" />
                             <field name="register_date" string="Registration Date" />
                             <field name="vin" string="VIN" />
+                            <field name="brand" />
+                            <field name="make" />
+                            <field name="model" />
                             <field name="current_mileage" />
                             <field name="license_plate" string="License Plate Number" />
                         </group>
                         <group>
                             <separator string="Owner Information" />
-                            <field name="first_name" />
-                            <field name="last_name" />
+                            <field name="owner_id" />
+                            <field name="owner_phone" />
+                            <field name="owner_email" />
                         </group>
                     </group>
                     <notebook>
@@ -63,7 +69,6 @@
             <search>
                 <field name="registry_number" />
                 <field name="vin" />
-                <field name="last_name" />
                 <field name="license_plate" />
             </search>
         </field>

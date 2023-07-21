@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+    
+        <template id="motorcycles_view" >
+            <t t-call="website.layout">
+                <t t-set="title">Motocycles</t>
+
+                <div class="oe_structure">
+                    <section class="s_media_list pt32 pb32 o_cc o_cc2 o_colored_level" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;">
+                        <div class="container">
+                            <h1>Our Motocycles</h1>
+                            <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                                <t t-foreach="motorcycles" t-as="motorcycle">
+                                    <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                        <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center o_cc o_cc1 o_colored_level">
+                                            <div class="col-lg-4 align-self-stretch s_media_list_img_wrapper">
+                                                <img t-if="motorcycle.image_1920" t-att-src="image_data_uri(motorcycle.image_1920)" class="s_media_list_img h-100 w-100" alt="" loading="lazy"/>
+                                            </div>
+                                            <div class="col-lg-8 s_media_list_body">
+                                                <h3 class="o_default_snippet_text"><t t-esc="motorcycle.name"/></h3>
+                                                <a t-attf-href="/motorcycle/{{ slug(motorcycle) }}" class="btn btn-primary mb-2 o_default_snippet_text">Discover</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+    
+        <template id="motorcycle_view">
+            <t t-call="website.layout">
+                <t t-set="title" t-value="motorcycle.name"/>
+
+                <div class="oe_structure">
+                    <div class="container">
+                        <h1><t t-esc="motorcycle.name"/></h1>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

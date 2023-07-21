@@ -25,7 +25,7 @@
         "demo/motorcycle_demo.xml",
         "demo/motorcycle_products_demo.xml"
     ],
-    "depends": ["product", "stock", "website"],
+    "depends": ["product", "stock", "website", "theme_vehicle"],
     "application": True,
     "installable": True,
 }

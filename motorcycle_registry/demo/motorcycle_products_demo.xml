@@ -3,24 +3,93 @@
     <data noupdate="1">
     
         <record id="product_delivery_01" model="product.product">
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/img/bmw_g_310_gs.jpg" />
             <field name="name">BMW G 310 GS</field>
             <field name="standard_price">70000.0</field>
             <field name="list_price">70000.0</field>
             <field name="detailed_type">motorcycle</field>
+            <field name="launch_date">2023-05-10 02:33:23</field>
+            <field name="moto_range">30.0</field>
+            <field name="horse_power">45.0</field>
+            <field name="torque">7.0</field>
+            <field name="top_speed">350.0</field>
+            <field name="battery_capacity">10W</field>
+            <field name="curb_weight">30.0</field>
+            <field name="make">GR</field>
+            <field name="model">GS</field>
+            <field name="year">2023</field>
         </record>
 
         <record id="product_delivery_02" model="product.product">
-            <field name="name">HONDA 3333</field>
-            <field name="standard_price">40000.0</field>
-            <field name="list_price">40000.0</field>
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/img/bmw_g_310_gs.jpg" />
+            <field name="name">HONDA Invicta</field>
+            <field name="standard_price">50000.0</field>
+            <field name="list_price">50000.0</field>
             <field name="detailed_type">motorcycle</field>
+            <field name="launch_date">2023-02-10 02:33:23</field>
+            <field name="moto_range">20.0</field>
+            <field name="horse_power">35.0</field>
+            <field name="torque">6.0</field>
+            <field name="top_speed">250.0</field>
+            <field name="battery_capacity">10W</field>
+            <field name="curb_weight">20.0</field>
+            <field name="make">BR</field>
+            <field name="model">HI</field>
+            <field name="year">2023</field>
         </record>
 
         <record id="product_delivery_03" model="product.product">
-            <field name="name">DUCATI 20000</field>
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/img/ducati_diavel_v4.jpeg" />
+            <field name="name">Ducati Diavel V4</field>
             <field name="standard_price">100000.0</field>
             <field name="list_price">100000.0</field>
             <field name="detailed_type">motorcycle</field>
+            <field name="launch_date">2020-03-20 02:33:23</field>
+            <field name="moto_range">32.0</field>
+            <field name="horse_power">12.0</field>
+            <field name="torque">5.0</field>
+            <field name="top_speed">150.0</field>
+            <field name="battery_capacity">10W</field>
+            <field name="curb_weight">20.0</field>
+            <field name="make">JP</field>
+            <field name="model">DV</field>
+            <field name="year">2020</field>
+        </record>
+
+        <record id="product_delivery_04" model="product.product">
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/img/ducati_desert_x.jpeg" />
+            <field name="name">Ducati DesertX</field>
+            <field name="standard_price">700000.0</field>
+            <field name="list_price">100000.0</field>
+            <field name="detailed_type">motorcycle</field>
+            <field name="launch_date">2023-07-11 09:12:23</field>
+            <field name="moto_range">20.0</field>
+            <field name="horse_power">20.0</field>
+            <field name="torque">3.0</field>
+            <field name="top_speed">200.0</field>
+            <field name="battery_capacity">9W</field>
+            <field name="curb_weight">30.0</field>
+            <field name="make">US</field>
+            <field name="model">DX</field>
+            <field name="year">2023</field>
+        </record>
+
+        <record id="product_delivery_05" model="product.product">
+            <field name="image_1920" type="base64" file="motorcycle_registry/static/img/ducati_supersport_950.jpeg" />
+            <field name="name">SuperSport 950</field>
+            <field name="standard_price">345600.0</field>
+            <field name="list_price">345600.0</field>
+            <field name="detailed_type">motorcycle</field>
+            <field name="launch_date">2022-03-12 02:33:23</field>
+            <field name="moto_range">30.0</field>
+            <field name="horse_power">45.0</field>
+            <field name="torque">4.0</field>
+            <field name="top_speed">300.0</field>
+            <field name="battery_capacity">20W</field>
+            <field name="curb_weight">30.0</field>
+            <field name="make">JP</field>
+            <field name="model">SS</field>
+            <field name="year">2022</field>
         </record>
     
     </data>

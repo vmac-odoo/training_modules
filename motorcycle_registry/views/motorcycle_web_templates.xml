@@ -9,7 +9,8 @@
                 <div class="oe_structure">
                     <section class="s_media_list pt32 pb32 o_cc o_cc2 o_colored_level" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;">
                         <div class="container">
-                            <h1>Our Motocycles</h1>
+                            <h1 class="display-2">Our Motocycles</h1>
+                            <hr/>
                             <div class="row s_nb_column_fixed s_col_no_bgcolor">
                                 <t t-foreach="motorcycles" t-as="motorcycle">
                                     <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
@@ -19,11 +20,45 @@
                                             </div>
                                             <div class="col-lg-8 s_media_list_body">
                                                 <h3 class="o_default_snippet_text"><t t-esc="motorcycle.name"/></h3>
-                                                <a t-attf-href="/motorcycle/{{ slug(motorcycle) }}" class="btn btn-primary mb-2 o_default_snippet_text">Discover</a>
+                                                <p t-if="motorcycle.launch_date">Launch Date: <span class="text-danger"><t t-esc="motorcycle.launch_date"/></span></p>
+                                                <p t-if="motorcycle.moto_range">Range: <span class="text-danger"><t t-esc="motorcycle.moto_range"/></span></p>
+                                                <p t-if="motorcycle.horse_power">House Power: <span class="text-danger"><t t-esc="motorcycle.horse_power"/></span></p>
+                                                <p t-if="motorcycle.torque">Torque: <span class="text-danger"><t t-esc="motorcycle.torque"/></span></p>
+                                                <p t-if="motorcycle.top_speed">Top Speed: <span class="text-danger"><t t-esc="motorcycle.top_speed"/></span></p>
+                                                <p t-if="motorcycle.battery_capacity">Battery Capacity: <span class="text-danger"><t t-esc="motorcycle.battery_capacity"/></span></p>
+                                                <p t-if="motorcycle.curb_weight">Curb Weight: <span class="text-danger"><t t-esc="motorcycle.curb_weight"/></span></p>
+                                                <a t-attf-href="/motorcycle/{{ slug(motorcycle) }}" class="btn btn-primary mb-2 o_default_snippet_text">More about <t t-esc="motorcycle.name" /></a>
                                             </div>
                                         </div>
                                     </div>
                                 </t>
+                            </div>
+                            <div class="row">
+                                <nav class="">
+                                    <ul class="pagination">
+                                        <t t-if="pager['page']['num'] != 1">
+                                            <li class="page-item">
+                                                <a t-att-href="pager['page_previous']['url']" class="page-link">
+                                                    Previous
+                                                </a>
+                                            </li>
+                                        </t>
+                                        <t t-foreach="pager['pages']" t-as="page">
+                                            <li t-attf-class="page-item {{'active' if pager['page']['num'] == page['num'] else ''}}">
+                                                <a t-att-href="page['url']" class="page-link">
+                                                    <t t-esc="page['num']"/>
+                                                </a>
+                                            </li>
+                                        </t>
+                                        <t t-if="pager['page']['num'] != pager['page_last']['num']">
+                                            <li class="page-item">
+                                                <a t-att-href="pager['page_next']['url']" class="page-link">
+                                                    Next
+                                                </a>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </section>
@@ -36,9 +71,92 @@
                 <t t-set="title" t-value="motorcycle.name"/>
 
                 <div class="oe_structure">
-                    <div class="container">
-                        <h1><t t-esc="motorcycle.name"/></h1>
-                    </div>
+                    <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_colored_level" data-scroll-background-ratio="1" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Origins/18&quot;,&quot;flip&quot;:[&quot;x&quot;]}" data-snippet="s_banner" data-name="Banner" style="background-image: none;">
+                        <span class="s_parallax_bg oe_img_bg" t-attf-style="background-image: url('{{image_data_uri(motorcycle.image_1920)}}'); background-position: 50% 0;"></span>
+                        <div class="o_we_shape o_web_editor_Origins_18" style="background-image: url(&quot;/web_editor/shape/web_editor%2FOrigins%2F18.svg?c1=%23ffffff&amp;flip=x&quot;); background-position: 50% 50%;"></div>
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-6 jumbotron rounded pt32 pb32 o_colored_level" data-name="Box">
+                                    <h1><font style="font-size: 62px;" class="o_default_snippet_text"><t t-esc="motorcycle.name" /></font></h1>
+                                    <a class="btn btn-primary mb-2 o_default_snippet_text" href="/contactus">Get Yours</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="s_table_of_content pt24 pb24 o_cc o_cc1 o_colored_level" data-snippet="s_table_of_content" data-name="Table of Content" style="background-image: none;">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-3 s_table_of_content_navbar_wrap s_table_of_content_navbar_sticky s_table_of_content_vertical_navbar d-print-none d-none d-lg-block o_not_editable o_cc o_cc1 o_colored_level" data-name="Navbar">
+                                    <div class="s_table_of_content_navbar list-group o_no_link_popover" style="top: 83.5795px; max-height: calc(100vh - 103.579px);"><a href="#table_of_content_heading_1689966122976_250" class="table_of_content_link list-group-item list-group-item-action py-2 border-0 rounded-0">Motorcycle Info</a><a href="#table_of_content_heading_1689966122976_251" class="table_of_content_link list-group-item list-group-item-action py-2 border-0 rounded-0">Motor Info</a><a href="#table_of_content_heading_1689966122976_252" class="table_of_content_link list-group-item list-group-item-action py-2 border-0 rounded-0">Power Info</a></div>
+                                </div>
+                                <div class="col-lg-9 s_table_of_content_main oe_structure oe_empty o_colored_level" data-name="Content" data-editor-message-default="true" data-editor-message="DRAG BUILDING BLOCKS HERE">
+                                    <section class="pb16 o_colored_level" style="background-image: none;">
+                                        <h1 data-anchor="true" id="table_of_content_heading_1689966122976_250">Motorcycle Info</h1>
+                                        <t t-if="motorcycle.make">
+                                            <h4>Make</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.make"/>
+                                            </p>
+                                        </t>
+                                        <t t-if="motorcycle.model">
+                                            <h4>Model</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.model"/>
+                                            </p>
+                                        </t>
+                                        <t t-if="motorcycle.year">
+                                            <h4>Year</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.year"/>
+                                            </p>
+                                        </t>
+                                    </section>
+                                    <section class="pb16 o_colored_level" style="background-image: none;">
+                                        <h1 data-anchor="true" id="table_of_content_heading_1689966122976_251">Motor Info</h1>
+                                        <t t-if="motorcycle.horse_power">
+                                            <h4>Horse Power</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.horse_power"/>
+                                            </p>
+                                        </t>
+                                        <t t-if="motorcycle.top_speed">
+                                            <h4>Top Speed</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.top_speed"/>
+                                            </p>
+                                        </t>
+                                        <t t-if="motorcycle.torque">
+                                            <h4>Torque</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.torque"/>
+                                            </p>
+                                        </t>
+                                    </section>
+                                    <section class="pb16 o_colored_level" style="background-image: none;">
+                                        <h1 data-anchor="true" id="table_of_content_heading_1689966122976_252">Power Info</h1>
+                                        <t t-if="motorcycle.battery_capacity">
+                                            <h4>Battery Capacity</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.battery_capacity"/>
+                                            </p>
+                                        </t>
+                                        <t t-if="motorcycle.charge_time">
+                                            <h4>Charge Time</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.charge_time"/>
+                                            </p>
+                                        </t>
+                                        <t t-if="motorcycle.moto_range">
+                                            <h4>Range</h4>
+                                            <p class="o_default_snippet_text">
+                                               <t t-esc="motorcycle.moto_range"/>
+                                            </p>
+                                        </t>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </t>
         </template>
